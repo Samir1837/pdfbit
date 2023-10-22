@@ -3,7 +3,8 @@ import spacy
 from transformers import pipeline
 import tkinter as tk
 from tkinter import filedialog
-
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 # PDF dosyasını okuma
 def pdf_oku(dosya_adı):
     with open(dosya_adı, 'rb') as file:
